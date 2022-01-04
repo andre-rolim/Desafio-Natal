@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  background-color: var(--pink);
+}
+
+:root {
+  --red: #da2535;
+  --pink: #f7c7b9;
+  --white: #f9f9f9;
+  --gray: #8d8d8d;
+  --gray200: #404040;
+  --blacklight: #161212;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.menu {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.santaIcon {
+  display: flex;
+  align-items: center;
+}
+
+.santaIcon p {
+  cursor: default;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.santaIcon img {
+  padding-right: 1rem;
+}
+
+.menu ul {
+  display: flex;
+  gap: 1rem;
+}
+
+.menu ul li a {
+  font-weight: 500;
+  transition: 0.5s;
+}
+
+.menu ul li a:hover {
+  position: relative;
+  top: -1px;
+}
+
+/* MAIN SECTION */
+
+.mainSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 5rem;
+  margin-top: 5rem;
+}
+
+.mainSection > div {
+  max-width: 31rem;
+}
+
+.mainSection h1 {
+  font-size: 4rem;
+  line-height: 4rem;
+  margin-bottom: 2rem;
+}
+
+.mainSection > div > p {
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+}
+
+.btnMain::before {
+  content: "";
+  background: url("../img/icons/gift.png") no-repeat;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding-right: 0.5rem;
+  position: relative;
+  top: -2px;
+}
+
+.btnMain {
+  border: none;
+  width: 15.625rem;
+  height: 3rem;
+  border-radius: 8px;
+  background-color: var(--red);
+  cursor: pointer;
+  color: var(--white);
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  box-shadow: 2px 2px 2px 2px #9b1b25;
+  margin-bottom: 10rem;
+}
+
+.btnMain:hover {
+  background-color: #9b1b25;
+  position: relative;
+  top: -1px;
+  box-shadow: 2px 2px 2px 2px var(--red);
+}
+
+.imgSectionMain {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  align-self: baseline;
+}
+
+/* ACESSORIOES SECTION */
+
+.acessories {
+  background: var(--white);
+  text-align: center;
+  overflow: hidden;
+  padding-bottom: 10rem;
+}
+
+.acessories > .container > h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 4.5rem;
+  margin-top: 3.2rem;
+}
+
+.acessories > .container > p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin: 0 auto;
+  width: 29.375rem;
+  margin-top: 1rem;
+}
+
+.listAcessorioes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.listAcessorioes ul {
+  width: 12.5rem;
+}
+
+.listAcessorioes span {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.7rem;
+}
+
+.listAcessorioes p {
+  font-weight: 500;
+  color: var(--gray);
+  margin-top: 1rem;
+}
+
+.listAcessorioes img:hover {
+  position: relative;
+  top: -2px;
+  box-shadow: 2px 2px 2px 2px var(--gray200);
+  border-radius: 8px;
+}
+
+.h1Final {
+  max-width: 37rem;
+}
+
+/* FOOTER */
+
+.footer {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+footer {
+  background: var(--white);
+  padding: 3rem 0;
+}
+
+footer ul li {
+  margin-left: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--pink);
+  border-radius: 50%;
+}
+
+footer ul li a {
+  position: relative;
+  top: 2px;
+}
+
+@media screen and (max-width: 1024px) {
+  .menu {
+    max-width: 1000px;
+    padding: 0 1rem;
+  }
+  .mainSection {
+    flex-direction: column-reverse;
+  }
+  .imgSectionMain {
+    justify-content: center;
+    align-self: center;
+    padding-bottom: 2rem;
+  }
+  .listAcessorioes {
+    flex-direction: column;
+  }
+  .listAcessorioes ul {
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .imgSectionMain img {
+    max-width: 100%;
+  }
+  .h1Final {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .menu {
+    flex-direction: column;
+  }
+  .santaIcon {
+    margin-bottom: 2rem;
+  }
+  .text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .menu ul {
+    max-width: 70%;
+    flex-wrap: wrap;
+    font-size: 1.25rem;
+  }
+  .mainSection h1 {
+    font-size: 3rem;
+  }
+  footer ul {
+    max-width: 50%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  footer ul li {
+    margin-left: 0;
+    width: 3.75rem;
+    height: 3.75rem;
+  }
+}
